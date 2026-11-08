@@ -1,0 +1,149 @@
+<html>
+<head>
+  <title>Contact Us - Best Cars Dealership</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    .contact-container {
+      width: 80%;
+      margin: auto;
+      margin-top: 5%;
+    }
+    .contact-header {
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .contact-header h1 {
+      color: #008b8b;
+      font-weight: bold;
+    }
+    .contact-grid {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .contact-card {
+      flex: 1 1 30%;
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+    .contact-card h3 {
+      color: #008b8b;
+      margin-bottom: 15px;
+    }
+    .contact-card p {
+      margin: 8px 0;
+      font-size: 15px;
+      color: #333;
+    }
+    .contact-card a {
+      color: #008b8b;
+      text-decoration: none;
+    }
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .hours-table td {
+      padding: 6px 4px;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 14px;
+    }
+    .hours-table td:first-child {
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .contact-card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Content -->
+  <div class="contact-container">
+    <div class="contact-header">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you! Reach out to our team using any of the methods below.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Card 1: General Info -->
+      <div class="contact-card">
+        <h3>📍 Visit Our Dealership</h3>
+        <p><strong>Best Cars Dealership</strong></p>
+        <p>1234 Auto Drive<br>
+           Springfield, IL 62704<br>
+           United States</p>
+        <p>📞 Phone: <a href="tel:+12125550123">(212) 555-0123</a></p>
+        <p>✉️ Email: <a href="mailto:info@bestcars.com">info@bestcars.com</a></p>
+      </div>
+
+      <!-- Card 2: Department Contacts -->
+      <div class="contact-card">
+        <h3>📇 Department Contacts</h3>
+        <p><strong>Sales:</strong><br>
+           <a href="mailto:sales@bestcars.com">sales@bestcars.com</a><br>
+           (212) 555-0144</p>
+        <p><strong>Service &amp; Maintenance:</strong><br>
+           <a href="mailto:service@bestcars.com">service@bestcars.com</a><br>
+           (212) 555-0155</p>
+        <p><strong>Customer Support:</strong><br>
+           <a href="mailto:support@bestcars.com">support@bestcars.com</a><br>
+           (212) 555-0166</p>
+      </div>
+
+      <!-- Card 3: Hours -->
+      <div class="contact-card">
+        <h3>🕒 Business Hours</h3>
+        <table class="hours-table">
+          <tr><td>Monday – Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+          <tr><td>Saturday</td><td>10:00 AM – 5:00 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="margin-top: 15px;">
+          <strong>Follow us:</strong><br>
+          <a href="#">Facebook</a> &nbsp;|&nbsp;
+          <a href="#">Instagram</a> &nbsp;|&nbsp;
+          <a href="#">Twitter</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
