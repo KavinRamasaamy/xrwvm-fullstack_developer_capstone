@@ -24,17 +24,27 @@ const Dealer = () => {
   let reviews_url = root_url+`djangoapp/reviews/dealer/${id}`;
   let post_review = root_url+`postreview/${id}`;
   
-  const get_dealer = async ()=>{
-    const res = await fetch(dealer_url, {
-      method: "GET"
-    });
+  const get_dealer = async () => {
+  try {
+    const res = await fetch(dealer_url, { method: "GET" });
     const retobj = await res.json();
-    
-    if(retobj.status === 200) {
-      let dealerobjs = Array.from(retobj.dealer)
-      setDealer(dealerobjs[0])
+    console.log("dealer response:", retobj);        // confirm shape
+
+    if (retobj.status === 200 && retobj.dealer) {
+      // If it's already a single object, use it directly.
+      // If it's an array (defensive), take the first element.
+      const dealerObj = Array.isArray(retobj.dealer)
+        ? retobj.dealer[0]
+        : retobj.dealer;
+      setDealer(dealerObj || {});                    // never undefined
+    } else {
+      setDealer({});                                 // stay safe
     }
+  } catch (err) {
+    console.error("get_dealer failed:", err);
+    setDealer({});
   }
+};
 
   const get_reviews = async ()=>{
     const res = await fetch(reviews_url, {
